@@ -1,0 +1,48 @@
+/* 집중소 EP.1 — wall-clock timetable (outer ring 오후, inner ring 오전) */
+.clock-layout{display:grid;grid-template-columns:760px 1fr;gap:48px;align-items:center;flex:1;min-height:0}
+.clock-left{display:flex;justify-content:center}
+.clock-svg{width:100%;max-width:760px;height:auto;display:block;overflow:visible}
+.clock-svg .ring-pm{fill:#efe6d2;stroke:#1b1b1f;stroke-width:3}
+.clock-svg .ring-am{fill:#e4eef3;stroke:#1b1b1f;stroke-width:3}
+.clock-svg .face{fill:#fff;stroke:#1b1b1f;stroke-width:4}
+.clock-svg .tick{stroke:#b9b2a3;stroke-width:2}
+.clock-svg .tick.major{stroke:#1b1b1f;stroke-width:4}
+.clock-svg .hr{font-family:var(--font-pop);font-size:26px;fill:#9a94a3;text-anchor:middle;dominant-baseline:central}
+.clock-svg .hr.major{font-size:34px;fill:#1b1b1f}
+.clock-svg .ring-label{font-family:var(--font-fun);font-size:20px;fill:#6f6858;text-anchor:middle;dominant-baseline:central}
+.clock-svg .seg{cursor:pointer;transition:opacity .2s,transform .25s;transform-box:view-box;transform-origin:480px 480px}
+.clock-svg .seg path{stroke:#1b1b1f;stroke-width:3}
+.clock-svg .gap-label{font-family:var(--font-fun);font-size:22px;fill:#7d8f99;text-anchor:middle;dominant-baseline:central}
+.clock-svg .badge{cursor:pointer;transition:opacity .2s}
+.clock-svg .badge circle{stroke:#1b1b1f;stroke-width:3}
+.clock-svg .badge text{font-family:var(--font-pop);font-size:21px;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.clock-svg .leader{stroke:#1b1b1f;stroke-width:2}
+.clock-svg .hand{transition:transform .6s cubic-bezier(.3,1.4,.5,1);transform-box:view-box;transform-origin:480px 480px}
+.clock-svg .hand line{stroke:var(--accent);stroke-width:9;stroke-linecap:round}
+.clock-svg .c-day,.clock-svg .c-time,.clock-svg .c-place,.clock-svg .c-what{text-anchor:middle;paint-order:stroke fill;stroke:#fff;stroke-width:8px;stroke-linejoin:round}
+.clock-svg .c-day{font-family:var(--font-fun);font-size:24px;fill:#8a8494}
+.clock-svg .c-time{font-family:var(--font-pop);font-size:36px;fill:#1b1b1f}
+.clock-svg .c-place{font-family:var(--font-display);font-size:40px;fill:#1b1b1f}
+.clock-svg .c-what{font-family:var(--font-sans);font-size:20px;fill:#55596a}
+.clock-svg .sun{font-size:34px;text-anchor:middle;dominant-baseline:central}
+.clock-layout.picking .seg:not(.on),.clock-layout.picking .badge:not(.on){opacity:.32}
+.clock-svg .seg.on{transform:scale(1.035)}
+
+.clock-legend{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.clock-legend li{display:grid;grid-template-columns:40px 150px 1fr;align-items:center;gap:14px;padding:4px 14px;min-height:50px;border:3px solid transparent;border-radius:14px;cursor:pointer;transition:background .2s,border-color .2s}
+.clock-legend li:hover,.clock-legend li.on{background:#fff;border-color:#1b1b1f;box-shadow:3px 3px 0 #1b1b1f}
+.clock-legend .b{width:38px;height:38px;border-radius:50%;border:3px solid #1b1b1f;display:grid;place-items:center;font-family:var(--font-pop);font-size:18px}
+.clock-legend .tm{font-family:var(--font-pop);font-size:20px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.clock-legend .pl{font-family:var(--font-fun);font-size:23px;line-height:1.25}
+.clock-legend .pl small{display:inline;font-family:var(--font-sans);font-size:17px;color:var(--text-3);margin-left:6px}
+.clock-legend li.opt .pl::after{content:"선택";font-family:var(--font-fun);font-size:14px;background:var(--text-3);color:#fff;border-radius:999px;padding:1px 8px;margin-left:8px;position:relative;top:-2px}
+.clock-keys{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:18px;color:var(--text-2);padding-left:14px}
+.clock-keys span{display:inline-flex;align-items:center;gap:6px}
+.clock-keys i{width:18px;height:18px;border-radius:50%;border:2px solid #1b1b1f;display:inline-block}
+.clock-keys .ring-key{font-family:var(--font-fun);color:var(--text-1);background:#fff;border:2px solid #1b1b1f;border-radius:999px;padding:0 12px}
+
+body.mobile .clock-layout{grid-template-columns:1fr;gap:18px}
+body.mobile .clock-legend li{grid-template-columns:38px 130px 1fr;padding:6px 8px;gap:10px}
+body.mobile .clock-legend .tm{font-size:17px}
+body.mobile .clock-legend .pl{font-size:20px}
+body.mobile .clock-legend .pl small{display:block;margin-left:0}

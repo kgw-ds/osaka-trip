@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Han+Sans&family=Gaegu:wght@400;700&family=Gowun+Dodum&family=Jua&family=Noto+Sans+KR:wght@400;700;900&display=swap">
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/animations/animations.css">
-<link rel="stylesheet" href="osaka.css?v=7">
+<link rel="stylesheet" href="osaka.css?v=10">
+<link rel="stylesheet" href="clock.css?v=10">
 </head>
 <body>
 <div class="deck">
@@ -141,25 +142,8 @@
 <section class="slide" data-title="DAY1 시간표">
   <div class="topbar"><span class="logo-chip">집중소 <b>EP.1</b></span><span class="day-chip">DAY 1 · 12.19 SAT</span><span class="pg"></span></div>
   <div class="slide-title"><h2 class="cap yellow">DAY 1 <span class="p">시간표</span></h2><span class="en">먹거리 + 번화가 + 전통 골목</span></div>
-  <div style="display:grid;grid-template-columns:1fr 600px;gap:40px;flex:1">
-    <div class="sched anim-stagger-list" data-anim="stagger-list">
-      <div class="r"><span class="tm">13:05</span><span class="pl">간사이공항 T2</span><span class="wh">일본 도착, 입국 심사 ✈</span></div>
-      <div class="r"><span class="tm">13:50~16:20</span><span class="pl">공항 → 호텔</span><span class="wh">셔틀 · 난카이선 · 지하철 이동, 체크인</span></div>
-      <div class="r key"><span class="tm">16:50~17:50</span><span class="pl">센니치마에</span><span class="wh">오코노미야키 첫 식사</span></div>
-      <div class="r key"><span class="tm">18:10~18:40</span><span class="pl">신사이바시</span><span class="wh">포켓몬센터 오사카 DX <span class="badge">20시 폐점</span></span></div>
-      <div class="r"><span class="tm">18:40~19:30</span><span class="pl">신사이바시스지</span><span class="wh">쇼핑거리 · 미도스지 일루미네이션</span></div>
-      <div class="r night"><span class="tm">19:30~20:00</span><span class="pl">도톤보리</span><span class="wh">글리코상 · 에비스바시 · 네온사인</span></div>
-      <div class="r night"><span class="tm">20:00~20:20</span><span class="pl">호젠지 요코초</span><span class="wh">등불 골목과 사찰</span></div>
-      <div class="r night"><span class="tm">20:20~21:10</span><span class="pl">난바</span><span class="wh">타코야키 · 551 부타만 간식</span></div>
-      <div class="r night"><span class="tm">21:15~23:00</span><span class="pl">도톤보리</span><span class="wh">야키토리 이자카야 · 맥주 🍻</span></div>
-      <div class="r opt"><span class="tm">23:00~</span><span class="pl">자유시간</span><span class="wh">호텔 복귀 또는 밤거리 구경</span></div>
-    </div>
-    <div class="pstack" style="position:relative">
-      <figure class="polaroid" style="--r:4deg;left:10px;top:0;width:570px;height:500px"><span class="tape pink"></span><img src="img/dotonbori2.jpg" alt="도톤보리 야경"><figcaption>도톤보리 밤 산책 🌃</figcaption></figure>
-      <figure class="polaroid" style="--r:-5deg;left:-20px;top:430px;width:380px;height:330px;z-index:4"><span class="tape"></span><img src="img/hozenji.jpg" alt="호젠지 요코초"><figcaption>호젠지 요코초 🏮</figcaption></figure>
-      <div class="react p" style="--r:6deg;right:0;top:560px">오늘의 미션:<br>글리코 포즈 단체샷!</div>
-    </div>
-  </div>
+  <div data-clock="d1"></div>
+  <div class="react p" style="--r:5deg;right:90px;top:120px;font-size:28px">오늘의 미션: 글리코 포즈 단체샷!</div>
 </section>
 
 <!-- ============ DAY1 PART 1 ============ -->
@@ -241,31 +225,8 @@
 <section class="slide" data-title="DAY2 시간표">
   <div class="topbar"><span class="logo-chip">집중소 <b>EP.1</b></span><span class="day-chip sky">DAY 2 · 12.20 SUN</span><span class="pg"></span></div>
   <div class="slide-title"><h2 class="cap sky">DAY 2 <span class="y">시간표</span></h2><span class="en">전자상가 + 옛 거리 + 야경 + 온천</span></div>
-  <div class="sched two anim-stagger-list" data-anim="stagger-list">
-    <div class="r opt"><span class="tm">10:00~10:30</span><span class="pl">호텔</span><span class="wh">기상 · 준비 후 출발</span></div>
-    <div class="r"><span class="tm">14:30~15:20</span><span class="pl">츠텐카쿠 일대</span><span class="wh">거리 사진 · 스마트볼 <span class="badge">선택</span></span></div>
-    <div class="r key"><span class="tm">10:50~11:20</span><span class="pl">센니치마에</span><span class="wh">포켓몬카드 전문점</span></div>
-    <div class="r"><span class="tm">15:20~16:00</span><span class="pl">텐노지</span><span class="wh">하루카스 이동 · 입장</span></div>
-    <div class="r key"><span class="tm">11:25~11:55</span><span class="pl">오타로드</span><span class="wh">슈퍼 포테이토</span></div>
-    <div class="r key"><span class="tm">16:00~17:15</span><span class="pl">하루카스 300</span><span class="wh">전망대 · 일몰 · 야경 🌇</span></div>
-    <div class="r key"><span class="tm">12:00~12:20</span><span class="pl">덴덴타운</span><span class="wh">스루가야 중고매장</span></div>
-    <div class="r"><span class="tm">17:25~17:45</span><span class="pl">텐시바</span><span class="wh">크리스마스 마켓 🎄 <span class="badge">선택</span></span></div>
-    <div class="r key"><span class="tm">12:20~12:45</span><span class="pl">덴덴타운</span><span class="wh">GEO 중고 게임기 · 전자제품</span></div>
-    <div class="r night"><span class="tm">18:00~19:40</span><span class="pl">스파월드</span><span class="wh">온천 · 사우나 ♨️</span></div>
-    <div class="r key"><span class="tm">12:50~13:20</span><span class="pl">에비스초</span><span class="wh">게임탐정단 · 남쪽 거리</span></div>
-    <div class="r night"><span class="tm">20:20~21:50</span><span class="pl">난바</span><span class="wh">야키니쿠 저녁 🥩</span></div>
-    <div class="r"><span class="tm">13:35~14:30</span><span class="pl">신세카이</span><span class="wh">쿠시카츠 점심</span></div>
-    <div class="r night"><span class="tm">22:00~</span><span class="pl">난바</span><span class="wh">이자카야 · 야식 · 자유시간</span></div>
-  </div>
-  <div class="photo-strip">
-    <div class="photo"><img src="img/otaroad.jpg" alt="오타로드"><span class="tag">🎮 니폰바시</span></div>
-    <div class="photo"><img src="img/daruma.jpg" alt="쿠시카츠"><span class="tag">🍢 신세카이</span></div>
-    <div class="photo"><img src="img/harukas-view.jpg" alt="하루카스 야경"><span class="tag">🌇 하루카스</span></div>
-    <div class="photo"><img src="img/spaworld.jpg" alt="스파월드"><span class="tag">♨️ 스파월드</span></div>
-  </div>
-  <div class="box" style="background:var(--red);color:#fff;padding:14px 26px;font-size:22px;box-shadow:6px 6px 0 var(--border)">
-    <b style="font-family:var(--font-display);font-weight:400;font-size:28px">🔥 가장 빡빡한 날!</b> &nbsp;우선순위: 니폰바시 → 신세카이 → 하루카스 → 스파월드 → 야키니쿠. 밀리면 <b>스마트볼 · 크리스마스 마켓</b>부터 줄이기.
-  </div>
+  <div data-clock="d2"></div>
+  <div class="react y" style="--r:-4deg;right:90px;top:120px;font-size:26px">🔥 가장 빡빡한 날! 밀리면 선택 일정부터 패스</div>
 </section>
 
 <!-- ============ DAY2 GAME TOUR ============ -->
@@ -556,6 +517,7 @@
 </div>
 <script src="assets/runtime.js"></script>
 <script src="assets/animations/fx-runtime.js"></script>
-<script src="credits.js?v=7"></script>
-<script src="osaka.js?v=7"></script>
+<script src="credits.js?v=8"></script>
+<script src="osaka.js?v=8"></script>
+<script src="clock.js?v=10"></script>
 </body></html>
