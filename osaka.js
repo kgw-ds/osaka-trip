@@ -2,6 +2,13 @@
 (function(){
   'use strict';
 
+  // ---- page numbers ----
+  var all = document.querySelectorAll('.deck > .slide');
+  all.forEach(function(sl, i){
+    var pg = sl.querySelector('.topbar .pg');
+    if (pg) pg.textContent = String(i + 1).padStart(2, '0') + ' / ' + all.length;
+  });
+
   // ---- snow ----
   document.querySelectorAll('.snow').forEach(function(box){
     for (var i = 0; i < 26; i++){
@@ -16,7 +23,7 @@
   });
 
   // ---- lunch roulette ----
-  var MENU = [['🍜','우동'],['🍝','소바'],['🍥','라멘'],['🐷','돈카츠'],['🍚','규동']];
+  var MENU = [['🥩','고기 우동'],['🍛','카레 우동'],['🦊','유부 우동'],['🍝','소바'],['🍤','튀김 우동']];
   var disc = document.getElementById('disc');
   var btn = document.getElementById('spinBtn');
   var out = document.getElementById('spinResult');

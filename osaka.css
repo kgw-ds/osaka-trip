@@ -307,3 +307,51 @@ body.mobile .ending .tbc{font-size:72px}
 body.mobile .credits{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;columns:1;margin-top:30px;font-size:12px}
 
 body.mobile .ending .tbc{margin-top:34px}
+
+/* ======================= TIMETABLE ======================= */
+.sched{display:grid;gap:9px;align-content:start}
+.sched .r{display:grid;grid-template-columns:168px 210px 1fr;align-items:center;gap:14px;background:#fff;border:3px solid var(--border);
+  border-radius:14px;padding:8px 18px;font-size:21px;line-height:1.3;box-shadow:3px 3px 0 var(--border)}
+.sched .r .tm{font-family:var(--font-pop);font-size:21px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sched .r .pl{font-family:var(--font-fun);font-size:23px}
+.sched .r .wh{color:var(--text-2)}
+.sched .r.key{background:var(--accent-3)}
+.sched .r.night{background:#2a2346;color:#fff}.sched .r.night .wh{color:#d8d3f5}
+.sched .r.opt{border-style:dashed;box-shadow:none;background:var(--surface-2)}
+.sched .r .badge{font-family:var(--font-fun);font-size:16px;background:var(--accent);color:#fff;border-radius:999px;padding:1px 10px;margin-left:8px;white-space:nowrap}
+.sched .r.opt .badge{background:var(--text-3)}
+.sched.two{grid-template-columns:1fr 1fr;gap:9px 22px}
+.sched.two .r{grid-template-columns:150px 190px 1fr}
+
+/* ======================= SHOP STOPS ======================= */
+.stops{display:grid;gap:12px;position:relative}
+.stop{display:grid;grid-template-columns:58px 1fr;gap:16px;align-items:start;background:#fff;border:3px solid var(--border);border-radius:16px;padding:12px 18px;box-shadow:4px 4px 0 var(--border)}
+.stop .n{width:52px;height:52px;border-radius:50%;border:3px solid var(--border);display:grid;place-items:center;font-family:var(--font-pop);font-size:26px;background:var(--accent-2)}
+.stop h4{font-family:var(--font-fun);font-weight:400;font-size:28px;margin:0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;line-height:1.2}
+.stop h4 .tm{font-family:var(--font-pop);font-size:20px;background:var(--text-1);color:#fff;border-radius:8px;padding:1px 10px}
+.stop h4 .kind{font-family:var(--font-sans);font-size:17px;border:2px solid var(--border);border-radius:999px;padding:0 10px;background:var(--surface-2)}
+.stop p{margin:4px 0 0;font-size:20px;color:var(--text-2);line-height:1.4}
+
+/* alarm cards */
+.alarm{display:flex;flex-direction:column;gap:6px;background:#fff;border:3px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:18px 22px;position:relative}
+.alarm .t{font-family:var(--font-pop);font-size:46px;line-height:1;color:var(--red)}
+.alarm .d{font-family:var(--font-fun);font-size:20px;color:var(--text-3)}
+.alarm .w{font-size:23px;font-weight:700}
+.alarm::after{content:"⏰";position:absolute;right:16px;top:12px;font-size:34px}
+
+body.mobile .sched.two{grid-template-columns:1fr}
+body.mobile .sched .r,body.mobile .sched.two .r{grid-template-columns:118px 1fr;gap:4px 12px;padding:8px 14px}
+body.mobile .sched .r .wh{grid-column:1/-1;font-size:19px}
+body.mobile .alarm .t{font-size:38px}
+/* photos never push their card taller than the slide */
+.photo > img,.food .ph > img{position:absolute;inset:0;width:100%;height:100%}
+.slide > div[style*="grid"]{min-height:0}
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:26px 0}
+.photo-strip .photo{height:220px}
+body.mobile .photo-strip{grid-template-columns:1fr 1fr}
+body.mobile .photo-strip .photo{height:180px;min-height:0}
+
+body.mobile .slide .dual{grid-template-columns:1.6fr 1fr!important;min-height:0!important}
+body.mobile .dual img{height:280px!important}
+body.mobile .sched .r,body.mobile .sched.two .r{grid-template-columns:150px 1fr}
+body.mobile .sched .r .tm{font-size:18px}
